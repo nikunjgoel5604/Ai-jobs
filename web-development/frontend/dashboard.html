@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Dashboard - CareerSphere</title>
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<canvas id="bg"></canvas>
+<header>
+  <div class="logo">CareerSphere</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="career-planner.html">Career Planner</a>
+    <a href="job-search.html">Job Search</a>
+  </nav>
+</header>
+
+<main>
+  <section class="full-width-section page-hero">
+    <h2>Interactive Dashboard</h2>
+  </section>
+
+  <section class="info-blocks">
+    <div class="info-block">
+      <h3>Job Growth by Industry</h3>
+      <canvas id="industryGrowthChart"></canvas>
+    </div>
+    <div class="info-block">
+      <h3>Automation Risk vs. Salary</h3>
+      <canvas id="riskVsSalaryChart"></canvas>
+    </div>
+    <div class="info-block">
+      <h3>AI Adoption by Location</h3>
+      <canvas id="adoptionByLocationChart"></canvas>
+    </div>
+    <div class="info-block">
+      <h3>Automation Risk Trends (2020-2024)</h3>
+      <canvas id="automationTrendChart"></canvas>
+    </div>
+  </section>
+  <section class="full-width-section">
+    <h2>AI Adoption Insights</h2>
+    <div class="info-blocks">
+      <div class="info-block">
+        <h3>Model Accuracy (Actual vs. Predicted Risk)</h3>
+        <canvas id="actualVsPredictedChart"></canvas>
+      </div>
+      <div class="info-block">
+        <h3>Productivity vs. Training</h3>
+        <canvas id="productivityChart"></canvas>
+      </div>
+      <!-- <div class="info-block">
+        <h3>New Roles Created (Avg)</h3>
+        <canvas id="newRolesChart"></canvas>
+      </div> -->
+      <div class="info-block">
+        <h3>GenAI Tool Adoption</h3>
+        <canvas id="genAIToolsChart"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <section class="full-width-section">
+    <h2>Job Market Overview</h2>
+    <div class="info-blocks">
+      <div class="info-block">
+        <h3>Top 10 Job Locations</h3>
+        <canvas id="postingsLocationChart"></canvas>
+      </div>
+      <div class="info-block">
+        <h3>Experience Level Demand</h3>
+        <canvas id="experienceLevelChart"></canvas>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script src="js/common.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>

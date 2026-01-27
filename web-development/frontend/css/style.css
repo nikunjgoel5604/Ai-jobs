@@ -1,0 +1,448 @@
+:root {
+  --background-color: #000000;
+  --card-background: rgba(76, 77, 87, 0.25); /* 25% opacity of new background */
+  --text-color: #ffffff;
+  --accent-color: #c00719;
+  --primary-color: #7996ad;
+  --secondary-color: #afc4d4;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+#bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: var(--background-color);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: var(--card-background);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid var(--primary-color);
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--accent-color);
+  letter-spacing: 1px;
+}
+
+nav a {
+  color: var(--text-color);
+  text-decoration: none;
+  margin-left: 25px;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+  color: var(--accent-color);
+}
+
+/* --- CORRECTED HERO SECTION STYLES --- */
+.hero-section, .page-hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: transparent;
+  margin: 40px auto;
+  max-width: 900px;
+  border-radius: 15px;
+  box-shadow: none !important;      /* Use !important to override other styles */
+  border: none !important;          /* Use !important to override other styles */
+  backdrop-filter: none !important; /* Use !important to override other styles */
+}
+
+.hero-section h2, .page-hero h2 {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+}
+
+.hero-section p, .page-hero p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    color: var(--secondary-color);
+}
+/* --- END HERO STYLES --- */
+
+
+.cta-button {
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  border: none;
+  padding: 15px 35px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 20px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(233, 69, 96, 0.4);
+}
+
+.cta-button:hover {
+  background-color: #cf3750;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(233, 69, 96, 0.6);
+}
+
+.info-blocks {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin: 40px auto;
+  max-width: 1000px;
+}
+
+.info-block {
+  background-color: var(--card-background);
+  backdrop-filter: blur(10px) saturate(120%);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  flex: 1;
+  min-width: 300px;
+  transition: transform 0.2s ease-in-out;
+  border: 1px solid var(--primary-color);
+  max-height: 400px;
+  position: relative;
+}
+
+.info-block:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+}
+
+.info-block h3 {
+  color: var(--accent-color);
+  text-align: center;
+  margin-top: 0;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.full-width-section {
+    background-color: var(--card-background);
+    backdrop-filter: blur(10px) saturate(120%);
+    margin: 40px auto;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    max-width: 1000px;
+    border: 1px solid var(--primary-color);
+}
+
+/* Styling for titles in sections that are NOT heroes */
+.full-width-section:not(.page-hero):not(.hero-section) h2 {
+    text-align: center;
+    color: var(--accent-color);
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+#industry-filter {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border: 1px solid var(--secondary-color);
+    padding: 10px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 350px;
+    display: block;
+    margin: 0 auto 25px auto;
+    font-size: 16px;
+}
+
+#top-skills, #automation-risk, .details-container {
+  max-height: 250px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+#top-skills p, #automation-risk p, .details-container p {
+  background-color: var(--primary-color);
+  padding: 12px;
+  border-radius: 8px;
+  margin: 10px 0;
+  transition: background-color 0.3s ease-in-out;
+  font-size: 16px;
+}
+
+#top-skills p:hover, #automation-risk p:hover, .details-container p:hover {
+    background-color: var(--secondary-color);
+}
+
+canvas {
+    max-width: 100%;
+    height: auto;
+    background-color: transparent;
+    padding: 15px;
+}
+
+.info-block canvas, .full-width-section canvas {
+    max-height: 300px;
+}
+
+.tool-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.tool-container .autocomplete-container {
+    flex-grow: 1;
+}
+
+.tool-container input[type="text"] {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border: 1px solid var(--primary-color);
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.tool-container button {
+    flex-shrink: 0;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.tool-container button:hover {
+    background-color: #cf3750;
+}
+
+.autocomplete-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.autocomplete-items {
+    position: absolute;
+    border: 1px solid #4e4a6a;
+    border-top: none;
+    z-index: 99;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #2c2c44;
+}
+
+.autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #4e4a6a;
+}
+
+.autocomplete-items div:hover {
+    background-color: #4e4a6a;
+}
+
+.skill-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(44, 44, 68, 0.9);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #4e4a6a;
+    transition: all 0.3s ease;
+}
+
+.skill-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.skill-item span {
+    font-size: 1rem;
+    color: #e4e4f0;
+}
+
+.find-jobs-btn {
+    background-color: var(--accent-color);
+    color: #ffffff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.find-jobs-btn:hover {
+    background-color: #ff5773;
+}
+
+.job-listing {
+    background-color: var(--card-background);
+    backdrop-filter: blur(10px);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #4e4a6a;
+}
+
+/* ---- Custom Scrollbar Styling ---- */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--accent-color);
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #cf3750;
+}
+/* --- STYLES FOR NEW GOOGLE-LIKE SEARCH BAR ON INDEX.HTML --- */
+.google-search-wrapper {
+    max-width: 584px;
+    margin: 40px auto 0; /* Added margin-top */
+    padding: 0 20px;
+}
+
+.google-search-form {
+    border: 1px solid var(--primary-color);
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    padding: 5px 15px;
+    background-color: rgba(26, 26, 46, 0.5); /* Semi-transparent background */
+    backdrop-filter: blur(5px);
+}
+
+.google-search-form:hover {
+    background-color: rgba(44, 44, 68, 0.7);
+}
+
+.search-input-container {
+    flex-grow: 1;
+}
+
+.search-input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: var(--text-color);
+    font-size: 16px;
+    padding: 10px;
+    outline: none;
+}
+
+.search-input::placeholder {
+    color: var(--secondary-color);
+}
+
+.search-button-google {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 20px;
+    padding: 10px 24px;
+    cursor: pointer;
+    font-weight: 500;
+    margin-left: 10px;
+    transition: background-color 0.3s;
+}
+
+.search-button-google:hover {
+    background-color: #cf3750;
+}
+
+
+/* --- IMPROVED STYLES FOR JOB-SEARCH.HTML RESULTS --- */
+#job-listings {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Overriding the default .job-listing to be a card */
+.job-listing {
+    background-color: var(--card-background);
+    backdrop-filter: blur(10px);
+    padding: 20px; /* Increased padding */
+    border-radius: 12px; /* Smoother corners */
+    border: 1px solid var(--primary-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.job-listing:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+.job-listing h4 {
+    color: var(--accent-color);
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+}
+
+.job-listing p {
+    margin: 4px 0;
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+}
+
+.job-listing .skills-container {
+    margin-top: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.skill-tag {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    font-size: 0.8rem;
+    padding: 4px 8px;
+    border-radius: 12px;
+}
+/* Add spacing below the search bar on the job search page */
+#job-search-page-bar {
+    margin-bottom: 2rem;
+}

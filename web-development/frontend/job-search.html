@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Job Search - CareerSphere</title>
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<canvas id="bg"></canvas>
+<header>
+  <div class="logo">CareerSphere</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="career-planner.html">Career Planner</a>
+    <a href="job-search.html">Job Search</a>
+  </nav>
+</header>
+
+<main>
+  <section class="full-width-section page-hero">
+    <h2>Job Search</h2>
+  </section>
+
+  <div class="google-search-wrapper" id="job-search-page-bar">
+    <form id="search-form" class="google-search-form" action="job-search.html" method="GET">
+        <div class="search-input-container">
+            <input type="text" name="skill" id="search-input" class="search-input" placeholder="Search for jobs or skills">
+        </div>
+        <div class="search-button-container">
+            <button type="submit" id="search-btn" class="search-button-google">Search</button>
+        </div>
+    </form>
+  </div>
+
+  <div id="job-listings" class="full-width-section">
+    </div>
+</main>
+
+<script src="js/common.js"></script>
+<script src="js/job-search.js"></script>
+</body>
+</html>
